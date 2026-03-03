@@ -1,0 +1,233 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Find Your Chill — Lo‑Fi Playlists & Calm Aesthetics</title>
+  <meta name="description" content="A relaxed guide to making lo‑fi playlists—cozy, simple, and easy to scroll. Soft visuals, gentle sound, and good vibes only." />
+  <!-- Link the Part‑1 stylesheet you completed -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Minimal, accessibility-only utilities (no layout overrides) -->
+  <style>
+    /* Make the skip link visible when focused (keyboard users) */
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+      background: #111;
+      color: #fff;
+      padding: 0.5rem 0.75rem;
+      border-radius: 4px;
+      text-decoration: none;
+    }
+    .skip-link:focus {
+      left: 0.5rem;
+      top: 0.5rem;
+      z-index: 1000;
+    }
+
+    /* Visually hide content but keep it available to assistive tech */
+    .visually-hidden {
+      position: absolute !important;
+      width: 1px; height: 1px;
+      padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0 0 0 0);
+      white-space: nowrap; border: 0;
+    }
+
+    /* Small decorative icon sizing only (doesn't affect layout) */
+    .inline-icon {
+      width: 20px;
+      height: 20px;
+      vertical-align: middle;
+      margin-right: 0.4rem;
+      fill: currentColor; /* inherit text color */
+      flex: 0 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <!-- Skip link helps keyboard and screen reader users bypass repeated nav -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">Chill Vibes<span class="dot">.</span> Studio</div>
+
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#hero">Home</a>
+        <a href="#features">Playlists</a>
+        <a href="#featured">Resources</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== Main ===== -->
+  <main id="main">
+
+    <!-- ===== Hero ===== -->
+    <section id="hero" class="hero" aria-labelledby="hero-title">
+      <div class="container hero-content">
+        <!-- Exactly one H1 on the page -->
+        <h1 id="hero-title">Find Your Chill</h1>
+        <p class="hero-subhead">A simple corner of the internet dedicated to good vibes only.</p>
+
+        <p>
+          <a href="#features" class="btn btn-dark" aria-describedby="get-started-desc">Get Started</a>
+          <a href="#featured" class="btn btn-outline">See the Aesthetic</a>
+        </p>
+        <p id="get-started-desc" class="visually-hidden">
+          Jump to the features that introduce the site.
+        </p>
+      </div>
+    </section>
+
+    <!-- (Optional) If you want to keep the cat photo as an inline hero image, you can place it here in content; 
+         the CSS hero already shows a background image per TODO C. 
+         If you prefer the cat image instead of the CSS background, remove the gradient/image in TODO C.) -->
+    <section aria-label="Hero illustration">
+      <div class="container">
+        <figure>
+          <img src="images/chill_image5.jpg" alt="White cat wearing headphones on a pink background" />
+          <figcaption>Cozy sounds, soft color palette, and calm energy.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===== Features (3 columns) ===== -->
+    <section id="features" class="features" aria-labelledby="features-title">
+      <div class="container">
+        <h2 id="features-title" class="section-title">What You’ll Find</h2>
+        <p class="section-lede">Soft sound, soft visuals, soft everything.</p>
+
+        <div class="features-grid">
+          <article class="feature" aria-labelledby="feat-1-title">
+            <div class="icon">🎧</div>
+            <h3 id="feat-1-title">Soft Sounds, Softer Vibes</h3>
+            <p>
+              A calm space inspired by cozy moments, quiet playlists, and gentle energy.
+              Perfect for unwinding after a long day.
+            </p>
+          </article>
+
+          <article class="feature" aria-labelledby="feat-2-title">
+            <div class="icon">🌙</div>
+            <h3 id="feat-2-title">Dreamy Night Aesthetics</h3>
+            <p>
+              Explore soft gradients, starry skies, and peaceful nighttime colors that set
+              the tone for a relaxing visual escape.
+            </p>
+          </article>
+
+          <article class="feature" aria-labelledby="feat-3-title">
+            <div class="icon">🖌️</div>
+            <h3 id="feat-3-title">Calm Creativity</h3>
+            <p>
+              A blend of simple design and soothing imagery that helps you focus, breathe,
+              and enjoy the little things.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Featured content ===== -->
+    <section id="featured" class="featured" aria-labelledby="featured-title">
+      <div class="container">
+        <h2 id="featured-title" class="section-title">The Art of Chill Spaces</h2>
+        <p class="section-lede">
+          Creating a calming environment doesn’t have to be complicated; it just needs a few
+          intentional choices. This section highlights how color, sound, and simplicity work
+          together to build a peaceful digital atmosphere.
+        </p>
+
+        <!-- The template provides a neutral "media" box that styles nicely -->
+        <div class="media">
+          <!-- You can keep your figure instead of this placeholder box if you prefer -->
+          <figure>
+            <img
+              src="images/chill_image4.jpg"
+              alt="Soft pastel workspace with gentle lighting that evokes a calm atmosphere" />
+            <figcaption>
+              Featured visual: a simple, cozy scene to inspire your own chill setup.
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Secondary content (2 cards) ===== -->
+    <section id="secondary" class="secondary" aria-labelledby="secondary-title">
+      <div class="container secondary-grid">
+
+        <!-- Card A -->
+        <article class="card">
+          <div class="card-text">
+            <h3>Color Vibes</h3>
+            <p>
+              A curated palette built around soft pastels and twilight hues to make your page
+              feel warm, gentle, and easy on the eyes.
+            </p>
+            <a href="#cta" class="btn btn-outline">Try the Palette</a>
+          </div>
+          <!-- Uses .img-a background from the template -->
+          <div class="card-image img-a" role="img" aria-label="Pastel gradient background"></div>
+        </article>
+
+        <!-- Card B -->
+        <article class="card">
+          <div class="card-text">
+            <h3>Small Moments, Big Calm</h3>
+            <p>
+              Tiny breaks, soft visuals, and quiet soundscapes can make any day feel lighter —
+              this space celebrates those moments.
+            </p>
+            <a href="#cta" class="btn btn-outline">Mini Rituals</a>
+          </div>
+          <!-- Uses .img-b background from the template -->
+          <div class="card-image img-b" role="img" aria-label="Abstract gentle tech setup"></div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section id="cta" class="cta" aria-labelledby="cta-title">
+      <div class="container cta-inner">
+        <h2 id="cta-title" class="section-title">Heard enough?</h2>
+        <p class="section-lede">Lean back, press play, and stay a while.</p>
+        <a href="#featured" class="btn btn-dark" aria-label="Start exploring the featured content">
+          Start Exploring
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer id="contact" class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <p>© 2026 Chill Vibes Studio</p>
+        <p><a href="#hero">Back to top</a></p>
+      </div>
+
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Browse</h4>
+          <a href="#features">Playlists</a>
+          <a href="#featured">Resources</a>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <a href="#cta">Contact</a>
+          <a href="#secondary">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
